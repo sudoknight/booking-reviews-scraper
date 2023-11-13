@@ -1,10 +1,7 @@
-from typing import Literal
-
 import typer
 from typing_extensions import Annotated
 
-from data_models import Input
-from scrape import Scrape
+from core.scrape import Scrape
 
 app = typer.Typer()
 
@@ -79,8 +76,3 @@ def execute(
 
 if __name__ == "__main__":
     typer.run(execute)
-
-
-# python run.py 'paramount-new-york' 'us'
-# python run.py 'paramount-new-york' 'us' --sort-by 'newest_first' --n-reviews 20
-# python run.py 'paramount-new-york' 'us' --stop-criteria-username 'Al' --stop-criteria-review-title 'المكان جدا جميل ويستحق الرجوع له مره اخرى'

@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 from dateutil import parser
 from deep_translator import GoogleTranslator
 
-from data_models import Config, Input, sort_by_map
+from core.data_models import Config, Input, sort_by_map
 
 logger = None
 PROCESS_POOL_SIZE = 5
