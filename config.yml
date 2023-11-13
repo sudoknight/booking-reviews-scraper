@@ -1,0 +1,4 @@
+REQUESTS_PER_SECOND: 10
+MAX_RETIES: 3
+HOTEL_REVIEWS_PAGE : "https://www.booking.com/reviewlist.en-gb.html"
+OUTPUT_DIR: "output"

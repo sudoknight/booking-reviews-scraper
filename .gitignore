@@ -1,0 +1,7 @@
+__pycache__
+.pytest_cache
+output
+notebooks
+logs
+tmp*
+.DS_Store
