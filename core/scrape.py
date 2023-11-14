@@ -98,9 +98,14 @@ class Scrape:
             ls_urls: list of total urls found
         """
         print("Progress Monitoring Thread Started")
+        prev = 0
         while not self._execution_finished.is_set():
             time.sleep(2)
-            print(f"Processed {len(self._parsed_pages_reviews)}/{len(ls_urls)}")
+            if len(self._parsed_pages_reviews):
+                ln = len(self._parsed_pages_reviews)
+                if ln > prev:
+                    print(f"Processed {ln}/{len(ls_urls)}")
+                    prev = ln
 
     def _save_local_files(
         self,
@@ -164,7 +169,7 @@ class Scrape:
 
         try:
             if text is not None:
-                if len(text) > 1:
+                if len(text) > 1 and text.isalpha():
                     translated = self._translator.translate(text)
                     if len(translated):
                         return translated
