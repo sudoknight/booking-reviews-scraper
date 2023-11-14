@@ -7,5 +7,6 @@
 1. moved language translator object to class level so that it is created once
 
 #### Fixed
-- error in logging (when used in multiprocessing mode)
-- tranlator crashing on emoji
+1. error in logging (when used in multiprocessing mode)
+2. tranlator crashing on emoji
+3. avoid translation of punctutaion only or non-alphabetic only strings
