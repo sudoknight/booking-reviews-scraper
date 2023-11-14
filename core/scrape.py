@@ -4,6 +4,7 @@ import logging
 import multiprocessing as mp
 import os
 import re
+import threading
 import time
 from datetime import datetime
 from typing import List, Union
@@ -26,9 +27,20 @@ headers = {"User-Agent": safari_user_agent}
 
 class Scrape:
     def __init__(self, input: dict, save_data_to_disk=True) -> None:
-        self._set_logger()
+        os.environ["job_id"] = str(datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
+        self._get_logger()
         self._config = self._load_config()
         self.input_params = Input(**input)
+        self._translator = GoogleTranslator(source="auto", target="en")
+
+        # the below property is for the purpose of monitoring progress
+        # It contains the parsed reviews of processed pages and their idx
+        self._parsed_pages_reviews = (
+            mp.Manager().list()
+        )  # It will contians the list of reviews for each page
+        self._execution_finished = (
+            mp.Event()
+        )  # set this event when execution if finished
 
         st_ = ""
         for key, value in self.input_params.model_dump().items():
@@ -36,22 +48,30 @@ class Scrape:
         logger.info(
             f"\n\n******** Input Params ********\n{st_}************************\n\n"
         )
-        # logger.info(f"\n************************\n\n")
 
-        self._LOCAL_OUTPUT_PATH = "{output_dir}/{entity_name}_" + str(datetime.now())
+        self._LOCAL_OUTPUT_PATH = "{output_dir}/{entity_name}_" + str(
+            os.getenv("job_id")
+        )
         self._save_data_to_disk = save_data_to_disk
 
-    def _set_logger(self):
+    def _get_logger(self):
         global logger
         # Create a logger
+
         logger = logging.getLogger(__name__)
+        handlers = logger.handlers[:]
+
+        for handler in handlers:
+            handler.close()
+            logger.removeHandler(handler)
+
         logger.setLevel(logging.DEBUG)
 
         if not os.path.isdir("logs"):
             os.mkdir("logs")
 
         # Create a file handler
-        file_handler = logging.FileHandler(f"logs/{datetime.now()}.log")
+        file_handler = logging.FileHandler(f"logs/{os.getenv('job_id')}.log")
         file_handler.setLevel(logging.DEBUG)
 
         # Create a console (stream) handler
@@ -69,6 +89,19 @@ class Scrape:
         logger.addHandler(file_handler)
         logger.addHandler(console_handler)
 
+        return logger
+
+    def _progress_thread_start(self, ls_urls: List[dict]):
+        """It will keep printing the overall progress
+
+        Args:
+            ls_urls: list of total urls found
+        """
+        print("Progress Monitoring Thread Started")
+        while not self._execution_finished.is_set():
+            time.sleep(2)
+            print(f"Processed {len(self._parsed_pages_reviews)}/{len(ls_urls)}")
+
     def _save_local_files(
         self,
         ls_reviews: List[dict] = None,
@@ -82,7 +115,6 @@ class Scrape:
             ls_reviews: list of review objects
 
         """
-
         dir_path = self._LOCAL_OUTPUT_PATH.format(
             output_dir=self._config.OUTPUT_DIR, entity_name=self.input_params.hotel_name
         )
@@ -117,7 +149,7 @@ class Scrape:
         config = Config(**config)
         return config
 
-    def translate(self, text) -> str:
+    def _translate(self, text: str) -> str:
         """Trasnlates the passed text into english
 
         Args:
@@ -126,16 +158,16 @@ class Scrape:
         Returns:
             translated text
         """
+        # get seperate logger for currenlt process only, when multiprocessing is being used
+        if "main" not in mp.current_process().name.lower():
+            logger = self._get_logger()
+
         try:
             if text is not None:
-                if len(text):
-                    translated = GoogleTranslator(source="auto", target="en").translate(
-                        text
-                    )
+                if len(text) > 1:
+                    translated = self._translator.translate(text)
                     if len(translated):
                         return translated
-                    else:
-                        logger.error(f"Failed to translate: {text} --> {translated}")
                 else:
                     return text
 
@@ -295,7 +327,7 @@ class Scrape:
         return None
 
     def _parse_scraped_results(
-        self, ls_response: List[dict], shared_ls_results: list = None
+        self, ls_response: List[dict]
     ) -> Union[List[dict], None]:
         """Takes response objects containing html content of a single reviews pages, and parses the data
 
@@ -306,11 +338,8 @@ class Scrape:
         Returns:
             None when shared list is passed, otherwise [ {idx of the review page, list of reviews in that page}, ... ]
         """
-        _return = False  # return results only when shared list is not passed
-        if shared_ls_results is None:
-            # when this method is not being used in multiprocess mode
-            shared_ls_results = []
-            _return = True
+
+        pages_reviews = []
 
         for (
             response_dict
@@ -392,9 +421,9 @@ class Scrape:
 
                 # if translation is required
                 if "en" not in original_lang:
-                    en_review_text_liked = self.translate(review_text_liked)
-                    en_review_text_disliked = self.translate(review_text_disliked)
-                    en_review_title = self.translate(review_title)
+                    en_review_text_liked = self._translate(review_text_liked)
+                    en_review_text_disliked = self._translate(review_text_disliked)
+                    en_review_title = self._translate(review_title)
                 else:  # copy the same original english versions
                     en_review_text_liked = review_text_liked
                     en_review_text_disliked = review_text_disliked
@@ -461,10 +490,10 @@ class Scrape:
 
             # idx: orginal offset_param value / id of reviews page
             # reviews: list of reviews found on the page
-            shared_ls_results.append({"idx": idx, "reviews": page_reviews})
+            self._parsed_pages_reviews.append({"idx": idx, "reviews": page_reviews})
+            pages_reviews.append({"idx": idx, "reviews": page_reviews})
 
-        if _return:
-            return shared_ls_results
+        return pages_reviews
 
     ##########################################################
     # ******** Scraping Modes full/partial ********
@@ -519,13 +548,10 @@ class Scrape:
 
         # split the list of response object into multiple splits
         # and send one list to each process
-        ls_reviews = mp.Manager().list()
         ls_p = []
         for split in np.array_split(responses, PROCESS_POOL_SIZE):
             if len(split):
-                p = mp.Process(
-                    target=self._parse_scraped_results, args=(split, ls_reviews)
-                )
+                p = mp.Process(target=self._parse_scraped_results, args=(split,))
                 p.start()
                 ls_p.append(p)
 
@@ -534,7 +560,7 @@ class Scrape:
 
         # Sort the list based on the 'idx' key in each dictionary
         # so that the reviews of the first page, come first
-        ls_reviews = sorted(ls_reviews, key=lambda x: x["idx"])
+        ls_reviews = sorted(self._parsed_pages_reviews, key=lambda x: x["idx"])
         result_list = []
         _ = [result_list.extend(d["reviews"]) for d in ls_reviews]
 
@@ -620,10 +646,12 @@ class Scrape:
         """
 
         _start = time.time()
-        ls_urls = self._create_urls()
         results = []
+        ls_urls = self._create_urls()
+        prog_thd = threading.Thread(target=self._progress_thread_start, args=(ls_urls,))
+        prog_thd.start()
 
-        if self.input_params.n_rows is None and self.input_params.stop_critera is None:
+        if self.input_params.n_rows == -1 and self.input_params.stop_critera is None:
             # it means to get all the reviews, based on the provided/default sort_by option
             results = self._get_all_reviews(ls_urls)
 
@@ -632,9 +660,12 @@ class Scrape:
 
         logger.info(f"Process complete {time.time() - _start:.1f} seconds")
         logger.info(f"Reviews found: {len(results)}")
-        print()
+
+        self._execution_finished.set()  # to stop the monitoring thread
 
         if self._save_data_to_disk:
             self._save_local_files(results)
+
+        os.environ.clear()
 
         return results
