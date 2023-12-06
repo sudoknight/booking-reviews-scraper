@@ -385,7 +385,7 @@ class Scrape:
                     stay_duration.split(" ·")[0] if stay_duration is not None else None
                 )
 
-                traveler_type = self._validate(
+                stay_type = self._validate(
                     review.select_one(
                         "ul.review-panel-wide__traveller_type div.bui-list__body"
                     )
@@ -477,8 +477,8 @@ class Scrape:
                     "user_country": user_country,
                     "room_view": room_view,
                     "stay_duration": stay_duration,
-                    "traveler_type": traveler_type,
-                    "date": date,
+                    "stay_type": stay_type,
+                    "review_post_date": date,
                     "review_title": review_title,
                     "rating": rating,
                     "original_lang": original_lang,
@@ -489,7 +489,7 @@ class Scrape:
                     "en_review_title": en_review_title,
                     "found_helpful": found_helpful,
                     "found_unhelpful": found_unhelpful,
-                    "owner_response": owner_response,
+                    "owner_resp_text": owner_response,
                 }
                 page_reviews.append(res)
 

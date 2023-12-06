@@ -74,8 +74,8 @@ This file contains review text and related fields. The produced fields are:
 | user_country      | Country of the reviewer |
 | room_view         | Room view or type, of the user e.g. 'Superior Room with Two Double Beds' |
 | stay_duration     | Stay duration of the user in terms of number of nights |
-| traveler_type     | Traveller type e.g. Group, Solo traveller, Family... |
-| date              | Date on which the review was posted |
+| stay_type         | Traveller's stay type e.g. Group, Solo traveller, Family... |
+| review_post_date  | Date on which the review was posted |
 | review_title      | Review title written by the reviewer |
 | rating            | Overall rating given by the reviewer, out of 10 |
 | original_lang     | Original language of the review/reviewer |
@@ -86,7 +86,7 @@ This file contains review text and related fields. The produced fields are:
 | en_review_title   | English translation of 'review_title', If already not in english |
 | found_helpful     | Number of people that have found the review helpful |
 | found_unhelpful   | Number of people that have found the review unhelpful |
-| owner_response    | Response of the hotel |
+| owner_resp_text   | Response of the hotel |
 
 
 ## Config
