@@ -1,3 +1,9 @@
+## 20-Mar-2024
+
+#### Added
+1. added run_as_module in run.py so that code can be called from third party
+
+
 ## 14-Nov-2023
 
 #### Added
