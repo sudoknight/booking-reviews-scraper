@@ -1,3 +1,9 @@
+## 21-Mar-2024
+
+#### Changed
+1. Ignore reviews with text: "There are no comments available for this review"
+
+
 ## 20-Mar-2024
 
 #### Added
