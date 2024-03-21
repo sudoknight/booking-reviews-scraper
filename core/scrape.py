@@ -411,11 +411,16 @@ class Scrape:
                 rating = float(rating) if rating is not None else rating
                 review_text = review.select("div.c-review span.c-review__body")
 
-                review_text_liked = en_review_text_liked = None
-                review_text_disliked = en_review_text_disliked = None
-                original_lang = en_review_title = None
+                review_text_liked, en_review_text_liked = None, None
+                review_text_disliked, en_review_text_disliked = None, None
+                original_lang, en_review_title = None, None
                 if review_text:
                     review_text_liked = self._validate(review_text[0])
+                    if (
+                        "There are no comments available for this review".lower()
+                        in review_text_liked.lower()
+                    ):
+                        review_text_liked = None
                     original_lang = review_text[0].get("lang", default=None)
 
                     if len(review_text) > 1:
