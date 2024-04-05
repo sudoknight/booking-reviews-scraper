@@ -81,9 +81,8 @@ This file contains review text and related fields. The produced fields are:
 | original_lang     | Original language of the review/reviewer |
 | review_text_liked | Review section showing the comments of the reviewer about the things he liked |
 | review_text_disliked | Review section showing the comments of the reviewer about the things he disliked |
-| en_review_text_liked | English translation of 'review_text_liked', If already not in english |
-| en_review_text_disliked | English translation of 'review_text_disliked', If already not in english |
-| en_review_title   | English translation of 'review_title', If already not in english |
+| full_review       | Field containing combined text of [review_title, review_text_liked, review_text_disliked]  |
+| en_full_review    | English translation of 'full_review', If the user language is en/en-US. otherwise Null |
 | found_helpful     | Number of people that have found the review helpful |
 | found_unhelpful   | Number of people that have found the review unhelpful |
 | owner_resp_text   | Response of the hotel |

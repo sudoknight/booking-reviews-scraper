@@ -1,3 +1,12 @@
+## 5-April-2024
+
+#### Added 
+1. Added field 'full_review', 'en_full_review' (Combining all the three fields 'review_title', 'review_text_liked', and 'review_text_disliked')
+
+#### Changed
+1. Removed translation functionality along with the translated (output fields: 'en_review_title', 'en_review_text_liked', 'en_review_text_disliked')
+
+
 ## 21-Mar-2024
 
 #### Changed

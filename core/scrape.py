@@ -6,7 +6,9 @@ import os
 import re
 import threading
 import time
+import string
 from datetime import datetime
+from logging import Logger
 from typing import List, Union
 from urllib.parse import parse_qs, urlparse
 
@@ -15,11 +17,10 @@ import requests
 import yaml
 from bs4 import BeautifulSoup
 from dateutil import parser
-from deep_translator import GoogleTranslator
 
 from core.data_models import Config, Input, sort_by_map
 
-logger = None
+logger: Logger
 PROCESS_POOL_SIZE = 5
 safari_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15"
 headers = {"User-Agent": safari_user_agent}
@@ -31,7 +32,6 @@ class Scrape:
         self._get_logger()
         self._config = self._load_config()
         self.input_params = Input(**input)
-        self._translator = GoogleTranslator(source="auto", target="en")
 
         # the below property is for the purpose of monitoring progress
         # It contains the parsed reviews of processed pages and their idx
@@ -153,33 +153,6 @@ class Scrape:
 
         config = Config(**config)
         return config
-
-    def _translate(self, text: str) -> str:
-        """Trasnlates the passed text into english
-
-        Args:
-            text: text to be translated
-
-        Returns:
-            translated text
-        """
-        # get seperate logger for currenlt process only, when multiprocessing is being used
-        if "main" not in mp.current_process().name.lower():
-            logger = self._get_logger()
-
-        try:
-            if text is not None:
-                if len(text) > 1 and text.isalpha():
-                    translated = self._translator.translate(text)
-                    if len(translated):
-                        return translated
-                else:
-                    return text
-
-        except Exception as ex:
-            logger.error(f"Error in translating: {text}  {ex}")
-
-        return None
 
     ##########################################################
     # ******** Scraping Logic Methods ********
@@ -325,7 +298,10 @@ class Scrape:
             string text extracted from element
         """
         if element is not None:
-            text = re.sub(r"\s+", " ", element.text).strip(" \n")
+            if isinstance(element, str):
+                text = re.sub(r"\s+", " ", element).strip(" \n")
+            else:
+                text = re.sub(r"\s+", " ", element.text).strip(" \n")
             if len(text):
                 return text
 
@@ -411,9 +387,10 @@ class Scrape:
                 rating = float(rating) if rating is not None else rating
                 review_text = review.select("div.c-review span.c-review__body")
 
-                review_text_liked, en_review_text_liked = None, None
-                review_text_disliked, en_review_text_disliked = None, None
-                original_lang, en_review_title = None, None
+                review_text_liked = None
+                review_text_disliked = None
+                original_lang = None
+                full_review, en_full_review = None, None
                 if review_text:
                     review_text_liked = self._validate(review_text[0])
                     if (
@@ -429,15 +406,22 @@ class Scrape:
                             if len(review_text) > 2:
                                 review_text_disliked = self._validate(review_text[2])
 
-                # if translation is required
-                if "en" not in original_lang:
-                    en_review_text_liked = self._translate(review_text_liked)
-                    en_review_text_disliked = self._translate(review_text_disliked)
-                    en_review_title = self._translate(review_title)
-                else:  # copy the same original english versions
-                    en_review_text_liked = review_text_liked
-                    en_review_text_disliked = review_text_disliked
-                    en_review_title = review_title
+                # Add '.' period sign to the end of each part of the review. If its not already there
+                t_title = review_title if review_title else ''
+                t_title = f"{t_title}." if t_title and t_title[-1] not in string.punctuation else t_title
+
+                t_liked = review_text_liked if review_text_liked else ''
+                t_liked = f"{t_liked}." if t_liked and t_liked[-1] not in string.punctuation else t_liked
+
+                t_disliked = review_text_disliked if review_text_disliked else ''
+                t_disliked = f"{t_disliked}." if t_disliked and t_disliked[-1] not in string.punctuation else t_disliked
+
+                full_review = f"{t_title} {t_liked} {t_disliked}"
+                full_review = self._validate(full_review)
+                # ------------------------------------------------
+
+                if "en" in original_lang:
+                    en_full_review = full_review
 
                 found_helpful = self._validate(
                     review.select_one(
@@ -489,9 +473,8 @@ class Scrape:
                     "original_lang": original_lang,
                     "review_text_liked": review_text_liked,
                     "review_text_disliked": review_text_disliked,
-                    "en_review_text_liked": en_review_text_liked,
-                    "en_review_text_disliked": en_review_text_disliked,
-                    "en_review_title": en_review_title,
+                    "full_review": full_review,
+                    "en_full_review": en_full_review,
                     "found_helpful": found_helpful,
                     "found_unhelpful": found_unhelpful,
                     "owner_resp_text": owner_response,
