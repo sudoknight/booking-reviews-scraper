@@ -1,7 +1,7 @@
 ## 9-September-2024
 
 #### Added
-1. Queue can be passed for the logger. It is Useful if the caller is listening to log queue.
+1. Logger can be passed.
 
 
 ## 5-April-2024
