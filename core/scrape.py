@@ -9,7 +9,6 @@ import sys
 import threading
 import time
 from datetime import datetime
-from logging.handlers import QueueHandler
 from typing import List, Union
 from urllib.parse import parse_qs, urlparse
 
@@ -27,16 +26,15 @@ headers = {"User-Agent": safari_user_agent}
 
 
 class Scrape:
-    def __init__(self, input: dict, save_data_to_disk=True, log_queue=None) -> None:
-        os.environ["job_id"] = str(datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
+    def __init__(self, input: dict, save_data_to_disk=True, logger=None) -> None:
+        if "job_id" not in os.environ:
+            os.environ["job_id"] = str(datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
 
-        if log_queue is not None:
-            # ONLY USED WHEN THERE IS A QUEUE LISTENER SOMEWHERE
-            self.configure_queue_logger(log_queue)
+        if logger is not None:
+            self.logger = logger
         else:
             self._get_logger()
-
-        self.logger = logging.getLogger()
+            self.logger = logging.getLogger()
 
         self._config = self._load_config()
         self.input_params = Input(**input)
@@ -61,17 +59,6 @@ class Scrape:
             os.getenv("job_id")
         )
         self._save_data_to_disk = save_data_to_disk
-
-    def configure_queue_logger(self, log_queue):
-        """THIS METHOD IS CALLED WHEN THE MODULE CALLING THIS SCRAPPER IS LISTENING TO LOGS FROM THE QUEUE.
-
-        Args:
-            log_queue: Queue in which the logs will be pushed. And the listerner will get them from the queue.
-        """
-        queue_handler = QueueHandler(log_queue)  # Send logs to the queue
-        root_logger = logging.getLogger()
-        root_logger.setLevel(logging.INFO)
-        root_logger.addHandler(queue_handler)
 
     def _get_logger(self):
         if not os.path.isdir("logs"):
@@ -680,7 +667,5 @@ class Scrape:
 
         if self._save_data_to_disk:
             self._save_local_files(results)
-
-        os.environ.clear()
 
         return results

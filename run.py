@@ -1,10 +1,9 @@
-from multiprocessing import Queue
+from logging import Logger
 from typing import List
 
 import typer
-from typing_extensions import Annotated
-
 from core.scrape import Scrape
+from typing_extensions import Annotated
 
 app = typer.Typer()
 
@@ -85,7 +84,7 @@ def run_as_module(
     save_to_disk: bool = True,
     stop_cri_user: str = "",
     stop_cri_title: str = "",
-    log_queue: Queue | None = None,
+    logger: Logger | None = None,
 ) -> List[dict]:
     """To run the scrapper as module by third party code
 
@@ -114,7 +113,7 @@ def run_as_module(
 
         input_params["stop_critera"] = stop
 
-    s = Scrape(input_params, save_data_to_disk=save_to_disk, log_queue=log_queue)
+    s = Scrape(input_params, save_data_to_disk=save_to_disk, logger=logger)
     ls_reviews = s.run()
     print(f"Scrapping Complete: Total Reviews  {len(ls_reviews)}")
     return ls_reviews
