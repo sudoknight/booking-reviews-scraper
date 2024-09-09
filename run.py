@@ -1,3 +1,4 @@
+from multiprocessing import Queue
 from typing import List
 
 import typer
@@ -84,6 +85,7 @@ def run_as_module(
     save_to_disk: bool = True,
     stop_cri_user: str = "",
     stop_cri_title: str = "",
+    log_queue: Queue | None = None,
 ) -> List[dict]:
     """To run the scrapper as module by third party code
 
@@ -112,7 +114,7 @@ def run_as_module(
 
         input_params["stop_critera"] = stop
 
-    s = Scrape(input_params, save_data_to_disk=save_to_disk)
+    s = Scrape(input_params, save_data_to_disk=save_to_disk, log_queue=log_queue)
     ls_reviews = s.run()
     print(f"Scrapping Complete: Total Reviews  {len(ls_reviews)}")
     return ls_reviews
