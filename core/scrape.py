@@ -4,11 +4,12 @@ import logging
 import multiprocessing as mp
 import os
 import re
+import string
+import sys
 import threading
 import time
-import string
 from datetime import datetime
-from logging import Logger
+from logging.handlers import QueueHandler
 from typing import List, Union
 from urllib.parse import parse_qs, urlparse
 
@@ -20,16 +21,23 @@ from dateutil import parser
 
 from core.data_models import Config, Input, sort_by_map
 
-logger: Logger
 PROCESS_POOL_SIZE = 5
 safari_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15"
 headers = {"User-Agent": safari_user_agent}
 
 
 class Scrape:
-    def __init__(self, input: dict, save_data_to_disk=True) -> None:
+    def __init__(self, input: dict, save_data_to_disk=True, log_queue=None) -> None:
         os.environ["job_id"] = str(datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
-        self._get_logger()
+
+        if log_queue is not None:
+            # ONLY USED WHEN THERE IS A QUEUE LISTENER SOMEWHERE
+            self.configure_queue_logger(log_queue)
+        else:
+            self._get_logger()
+
+        self.logger = logging.getLogger()
+
         self._config = self._load_config()
         self.input_params = Input(**input)
 
@@ -45,7 +53,7 @@ class Scrape:
         st_ = ""
         for key, value in self.input_params.model_dump().items():
             st_ += f"-->  {key}: {value}\n"
-        logger.info(
+        self.logger.info(
             f"\n\n******** Input Params ********\n{st_}************************\n\n"
         )
 
@@ -54,42 +62,42 @@ class Scrape:
         )
         self._save_data_to_disk = save_data_to_disk
 
+    def configure_queue_logger(self, log_queue):
+        """THIS METHOD IS CALLED WHEN THE MODULE CALLING THIS SCRAPPER IS LISTENING TO LOGS FROM THE QUEUE.
+
+        Args:
+            log_queue: Queue in which the logs will be pushed. And the listerner will get them from the queue.
+        """
+        queue_handler = QueueHandler(log_queue)  # Send logs to the queue
+        root_logger = logging.getLogger()
+        root_logger.setLevel(logging.INFO)
+        root_logger.addHandler(queue_handler)
+
     def _get_logger(self):
-        global logger
-        # Create a logger
-
-        logger = logging.getLogger(__name__)
-        handlers = logger.handlers[:]
-
-        for handler in handlers:
-            handler.close()
-            logger.removeHandler(handler)
-
-        logger.setLevel(logging.DEBUG)
-
         if not os.path.isdir("logs"):
             os.mkdir("logs")
 
         # Create a file handler
-        file_handler = logging.FileHandler(f"logs/{os.getenv('job_id')}.log")
-        file_handler.setLevel(logging.DEBUG)
+        file_path = f"logs/{os.getenv('job_id')}.log"
+        frmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
-        # Create a console (stream) handler
-        console_handler = logging.StreamHandler()
-        console_handler.setLevel(logging.DEBUG)
+        logger = logging.getLogger()
+        logger.setLevel(logging.INFO)
 
-        # Create a formatter
-        formatter = logging.Formatter(
-            "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-        )
-        file_handler.setFormatter(formatter)
-        console_handler.setFormatter(formatter)
+        # Log to console
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setLevel(logging.INFO)
+        console_formatter = logging.Formatter(frmt)
+        console_handler.setFormatter(console_formatter)
 
-        # Add the handlers to the logger
-        logger.addHandler(file_handler)
+        # Log to file
+        file_handler = logging.FileHandler(file_path)
+        file_handler.setLevel(logging.INFO)
+        file_formatter = logging.Formatter(frmt)
+        file_handler.setFormatter(file_formatter)
+
         logger.addHandler(console_handler)
-
-        return logger
+        logger.addHandler(file_handler)
 
     def _progress_thread_start(self, ls_urls: List[dict]):
         """It will keep printing the overall progress
@@ -97,14 +105,14 @@ class Scrape:
         Args:
             ls_urls: list of total urls found
         """
-        print("Progress Monitoring Thread Started")
+        self.logger.info("Progress Monitoring Thread Started")
         prev = 0
         while not self._execution_finished.is_set():
             time.sleep(2)
             if len(self._parsed_pages_reviews):
                 ln = len(self._parsed_pages_reviews)
                 if ln > prev:
-                    print(f"Processed {ln}/{len(ls_urls)}")
+                    self.logger.info(f"Processed {ln}/{len(ls_urls)}")
                     prev = ln
 
     def _save_local_files(
@@ -143,7 +151,7 @@ class Scrape:
                         writer.writerow(row.values())
 
                 except Exception as ex:
-                    logger.error(ex)
+                    self.logger.error(ex)
 
     def _load_config(self) -> Config:
         """Loads config.yml"""
@@ -166,7 +174,7 @@ class Scrape:
         Returns:
             value of offset parameter. 0 when there is only one review page
         """
-        logger.info("Checking max offset parameter value")
+        self.logger.info("Checking max offset parameter value")
 
         r = requests.get(
             self._config.HOTEL_REVIEWS_PAGE,
@@ -205,19 +213,19 @@ class Scrape:
                     offset = offset.split(";")[0]
 
                 if not offset.isdigit():
-                    logger.error(f"Offset paramter is non-digit: {offset}")
+                    self.logger.error(f"Offset paramter is non-digit: {offset}")
 
-                logger.info(f"Offset parameter max value: {offset}")
+                self.logger.info(f"Offset parameter max value: {offset}")
 
                 return int(offset)
             else:
-                logger.error(
+                self.logger.error(
                     f"Page number link <a> does not have href attribute: {a_elements_with_span[-1]}"
                 )
 
         # If there is only one reviews page then there is no offset parameter
         else:
-            logger.info("No offset parameter found")
+            self.logger.info("No offset parameter found")
 
         return 0
 
@@ -229,7 +237,7 @@ class Scrape:
             hotel_name: name of the hotel on booking.com
         """
         ls_urls = []
-        logger.info("Creating URLs")
+        self.logger.info("Creating URLs")
         param_offset_max: int = self._get_max_offset_parameter()
 
         # ********** BASED ON TOTAL REVIEW PAGES: CREATE LIST OF URLS TO SCRAPE **********
@@ -257,7 +265,7 @@ class Scrape:
             ls_urls.append({"idx": offset_counter, "url": url})
             offset_counter += 10
 
-        logger.info(f"Created URLs: {len(ls_urls)}")
+        self.logger.info(f"Created URLs: {len(ls_urls)}")
         return ls_urls
 
     def _scrape(self, url_dict: dict) -> dict:
@@ -281,7 +289,7 @@ class Scrape:
                 break
 
             else:
-                logger.warning(f"Retrying {retry_count} ... {url}")
+                self.logger.warning(f"Retrying {retry_count} ... {url}")
                 retry_count += 1
                 continue
 
@@ -407,14 +415,28 @@ class Scrape:
                                 review_text_disliked = self._validate(review_text[2])
 
                 # Add '.' period sign to the end of each part of the review. If its not already there
-                t_title = f"title: {review_title}" if review_title else ''
-                t_title = f"{t_title}." if t_title and t_title[-1] not in string.punctuation else t_title
+                t_title = f"title: {review_title}" if review_title else ""
+                t_title = (
+                    f"{t_title}."
+                    if t_title and t_title[-1] not in string.punctuation
+                    else t_title
+                )
 
-                t_liked = f"liked: {review_text_liked}" if review_text_liked else ''
-                t_liked = f"{t_liked}." if t_liked and t_liked[-1] not in string.punctuation else t_liked
+                t_liked = f"liked: {review_text_liked}" if review_text_liked else ""
+                t_liked = (
+                    f"{t_liked}."
+                    if t_liked and t_liked[-1] not in string.punctuation
+                    else t_liked
+                )
 
-                t_disliked = f"disliked: {review_text_disliked}" if review_text_disliked else ''
-                t_disliked = f"{t_disliked}." if t_disliked and t_disliked[-1] not in string.punctuation else t_disliked
+                t_disliked = (
+                    f"disliked: {review_text_disliked}" if review_text_disliked else ""
+                )
+                t_disliked = (
+                    f"{t_disliked}."
+                    if t_disliked and t_disliked[-1] not in string.punctuation
+                    else t_disliked
+                )
 
                 full_review = f"{t_title} {t_liked} {t_disliked}"
                 full_review = self._validate(full_review)
@@ -502,7 +524,7 @@ class Scrape:
             list of all the reviews
         """
         _start = time.time()
-        logger.info(f"Starting Get Requests on {len(ls_urls)} urls")
+        self.logger.info(f"Starting Get Requests on {len(ls_urls)} urls")
 
         # *************START: Send get request to all urls and save the response objects*************
 
@@ -531,11 +553,11 @@ class Scrape:
             # Use map to get results in the order of submission
             responses = list(executor.map(lambda f: f.result(), futures))
 
-        logger.info(f"Finished Get Requests in {time.time() - _start:.1f} seconds")
+        self.logger.info(f"Finished Get Requests in {time.time() - _start:.1f} seconds")
 
         # ************* --------END-------- *************
 
-        logger.info(f"Starting Parsing Responses: {len(responses)}")
+        self.logger.info(f"Starting Parsing Responses: {len(responses)}")
 
         # *************START: Parse the html content from all response objects*************
 
@@ -548,7 +570,7 @@ class Scrape:
                 p.start()
                 ls_p.append(p)
 
-        logger.info(f"Processes launched: {len(ls_p)}")
+        self.logger.info(f"Processes launched: {len(ls_p)}")
         _ = [p.join() for p in ls_p]
 
         # Sort the list based on the 'idx' key in each dictionary
@@ -557,7 +579,7 @@ class Scrape:
         result_list = []
         _ = [result_list.extend(d["reviews"]) for d in ls_reviews]
 
-        logger.info(
+        self.logger.info(
             f"Finished Parsing Responses: {len(result_list)} in {time.time() - _start:.1f} seconds"
         )
         # ************* --------END-------- *************
@@ -576,7 +598,7 @@ class Scrape:
         """
 
         _start = time.time()
-        logger.info(f"Starting Conditional Scraping on {len(ls_urls)} urls")
+        self.logger.info(f"Starting Conditional Scraping on {len(ls_urls)} urls")
 
         count_review = 0
         ls_reviews = []
@@ -624,7 +646,7 @@ class Scrape:
                     ls_reviews = ls_reviews[: self.input_params.n_rows]
                     break
 
-        logger.info(
+        self.logger.info(
             f"Finished Conditional Scraping: {len(ls_reviews)} in {time.time() - _start:.1f} seconds"
         )
         return ls_reviews
@@ -651,8 +673,8 @@ class Scrape:
         else:
             results = self._get_cond_reviews(ls_urls)
 
-        logger.info(f"Process complete {time.time() - _start:.1f} seconds")
-        logger.info(f"Reviews found: {len(results)}")
+        self.logger.info(f"Process complete {time.time() - _start:.1f} seconds")
+        self.logger.info(f"Reviews found: {len(results)}")
 
         self._execution_finished.set()  # to stop the monitoring thread
 
