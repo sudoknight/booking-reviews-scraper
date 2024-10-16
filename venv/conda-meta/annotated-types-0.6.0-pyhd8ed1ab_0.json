@@ -1,0 +1,126 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.7",
+    "typing-extensions >=4.0.0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/annotated-types-0.6.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/annotated_types-0.6.0.dist-info/licenses/LICENSE",
+    "lib/python3.11/site-packages/annotated_types/__init__.py",
+    "lib/python3.11/site-packages/annotated_types/py.typed",
+    "lib/python3.11/site-packages/annotated_types/test_cases.py",
+    "lib/python3.11/site-packages/annotated_types/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/annotated_types/__pycache__/test_cases.cpython-311.pyc"
+  ],
+  "fn": "annotated-types-0.6.0-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/annotated-types-0.6.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "997c29372bdbe2afee073dff71f35923",
+  "name": "annotated-types",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/annotated-types-0.6.0-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "efc61eaee4f76ff76887c4dbb0aeea71ba98e1cbc2333fd041108651bc80a3a3",
+        "sha256_in_prefix": "efc61eaee4f76ff76887c4dbb0aeea71ba98e1cbc2333fd041108651bc80a3a3",
+        "size_in_bytes": 12879
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "34485649c8b962ac76dee053e2bfacb6117863dd26f88bb64094eb8a83353697",
+        "sha256_in_prefix": "34485649c8b962ac76dee053e2bfacb6117863dd26f88bb64094eb8a83353697",
+        "size_in_bytes": 1002
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f5006e1e183a14d5bb969a5ba05daf2956c2193573b05ca48114238e56a3ae10",
+        "sha256_in_prefix": "f5006e1e183a14d5bb969a5ba05daf2956c2193573b05ca48114238e56a3ae10",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "21d83d6d511caf1096bb8a1bfd933f3ab703bf6aa240d822cac105ad1d709b6a",
+        "sha256_in_prefix": "21d83d6d511caf1096bb8a1bfd933f3ab703bf6aa240d822cac105ad1d709b6a",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "site-packages/annotated_types-0.6.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+        "sha256_in_prefix": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+        "size_in_bytes": 1083
+      },
+      {
+        "_path": "site-packages/annotated_types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b712e846df224a201cf92bb7edeb16a4c234c058cdf7657b804e4774521e78a2",
+        "sha256_in_prefix": "b712e846df224a201cf92bb7edeb16a4c234c058cdf7657b804e4774521e78a2",
+        "size_in_bytes": 12151
+      },
+      {
+        "_path": "site-packages/annotated_types/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/annotated_types/test_cases.py",
+        "path_type": "hardlink",
+        "sha256": "2df172511670afb5f73557e80ab49748c3314f1243e28f17cfe63ca9b998ec95",
+        "sha256_in_prefix": "2df172511670afb5f73557e80ab49748c3314f1243e28f17cfe63ca9b998ec95",
+        "size_in_bytes": 6327
+      },
+      {
+        "_path": "lib/python3.11/site-packages/annotated_types/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/annotated_types/__pycache__/test_cases.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "annotated-types==0.6.0",
+  "sha256": "3a2c98154d95cfd54daba6b7d507d31f5ba07ac2ad955c44eb041b66563193cd",
+  "size": 17026,
+  "subdir": "noarch",
+  "timestamp": 1696634393000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/annotated-types-0.6.0-pyhd8ed1ab_0.conda",
+  "version": "0.6.0"
+}

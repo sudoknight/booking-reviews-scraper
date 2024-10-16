@@ -1,0 +1,33 @@
+{
+  "build": "2_cp311",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "pypy <0a0"
+  ],
+  "depends": [
+    "python 3.11.*"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/python_abi-3.11-2_cp311",
+  "files": [],
+  "fn": "python_abi-3.11-2_cp311.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/conda/pkgs/python_abi-3.11-2_cp311",
+    "type": 1
+  },
+  "md5": "6048a94fd581e0570ebd72a63a577bf5",
+  "name": "python_abi",
+  "package_tarball_full_path": "/opt/conda/pkgs/python_abi-3.11-2_cp311.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d37a42aeb5a752e1d49828f30942423486bb6e38bb1ed209e862c5215a054871",
+  "size": 4621,
+  "subdir": "linux-64",
+  "timestamp": 1666687548000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.11-2_cp311.tar.bz2",
+  "version": "3.11"
+}

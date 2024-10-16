@@ -1,0 +1,63 @@
+{
+  "build": "ha770c72_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "libcxx 14.0.6.*"
+  ],
+  "depends": [],
+  "extracted_package_dir": "/opt/conda/pkgs/libcxxabi-14.0.6-ha770c72_0",
+  "files": [
+    "lib/libc++abi.a",
+    "lib/libc++abi.so",
+    "lib/libc++abi.so.1",
+    "lib/libc++abi.so.1.0"
+  ],
+  "fn": "libcxxabi-14.0.6-ha770c72_0.tar.bz2",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "link": {
+    "source": "/opt/conda/pkgs/libcxxabi-14.0.6-ha770c72_0",
+    "type": 1
+  },
+  "md5": "577cbf9cd242b587658fc69697256db2",
+  "name": "libcxxabi",
+  "package_tarball_full_path": "/opt/conda/pkgs/libcxxabi-14.0.6-ha770c72_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libc++abi.a",
+        "path_type": "hardlink",
+        "sha256": "6be3626db853807cc9d3f11f2b1bf75f35d1956125d2d8aba1ffdfab3f8ed588",
+        "sha256_in_prefix": "6be3626db853807cc9d3f11f2b1bf75f35d1956125d2d8aba1ffdfab3f8ed588",
+        "size_in_bytes": 634498
+      },
+      {
+        "_path": "lib/libc++abi.so",
+        "path_type": "softlink",
+        "sha256": "66dfe6c3ae8595cbefcc6070a96d44976c6c309105e7ca16056be87f59d58c3b",
+        "size_in_bytes": 337592
+      },
+      {
+        "_path": "lib/libc++abi.so.1",
+        "path_type": "softlink",
+        "sha256": "66dfe6c3ae8595cbefcc6070a96d44976c6c309105e7ca16056be87f59d58c3b",
+        "size_in_bytes": 337592
+      },
+      {
+        "_path": "lib/libc++abi.so.1.0",
+        "path_type": "hardlink",
+        "sha256": "66dfe6c3ae8595cbefcc6070a96d44976c6c309105e7ca16056be87f59d58c3b",
+        "sha256_in_prefix": "66dfe6c3ae8595cbefcc6070a96d44976c6c309105e7ca16056be87f59d58c3b",
+        "size_in_bytes": 337592
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6b5392b654b24cbc2343baafb30be35c82f1306a630fd4d3810eb8e077ecb63f",
+  "size": 189078,
+  "subdir": "linux-64",
+  "timestamp": 1656324366000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libcxxabi-14.0.6-ha770c72_0.tar.bz2",
+  "version": "14.0.6"
+}

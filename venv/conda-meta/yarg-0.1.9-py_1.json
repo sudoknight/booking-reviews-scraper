@@ -1,0 +1,252 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "requests"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/yarg-0.1.9-py_1",
+  "files": [
+    "lib/python3.11/site-packages/tests/__init__.py",
+    "lib/python3.11/site-packages/tests/test_client.py",
+    "lib/python3.11/site-packages/tests/test_exceptions.py",
+    "lib/python3.11/site-packages/tests/test_package.py",
+    "lib/python3.11/site-packages/tests/test_parse.py",
+    "lib/python3.11/site-packages/tests/test_release.py",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/PKG-INFO",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/SOURCES.txt",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/dependency_links.txt",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/requires.txt",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/top_level.txt",
+    "lib/python3.11/site-packages/yarg-0.1.9-py3.6.egg-info/zip-safe",
+    "lib/python3.11/site-packages/yarg/__about__.py",
+    "lib/python3.11/site-packages/yarg/__init__.py",
+    "lib/python3.11/site-packages/yarg/client.py",
+    "lib/python3.11/site-packages/yarg/exceptions.py",
+    "lib/python3.11/site-packages/yarg/package.py",
+    "lib/python3.11/site-packages/yarg/parse.py",
+    "lib/python3.11/site-packages/yarg/release.py",
+    "lib/python3.11/site-packages/tests/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/tests/__pycache__/test_client.cpython-311.pyc",
+    "lib/python3.11/site-packages/tests/__pycache__/test_exceptions.cpython-311.pyc",
+    "lib/python3.11/site-packages/tests/__pycache__/test_package.cpython-311.pyc",
+    "lib/python3.11/site-packages/tests/__pycache__/test_parse.cpython-311.pyc",
+    "lib/python3.11/site-packages/tests/__pycache__/test_release.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/__about__.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/client.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/exceptions.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/package.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/parse.cpython-311.pyc",
+    "lib/python3.11/site-packages/yarg/__pycache__/release.cpython-311.pyc"
+  ],
+  "fn": "yarg-0.1.9-py_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/yarg-0.1.9-py_1",
+    "type": 1
+  },
+  "md5": "b1142268ff8df6776f7ce755b1753b28",
+  "name": "yarg",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/yarg-0.1.9-py_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/tests/test_client.py",
+        "path_type": "hardlink",
+        "sha256": "ada260c48f8377b6d6cb91ef087ef2f8aa1e942254dfae43d8a7610b519aee92",
+        "sha256_in_prefix": "ada260c48f8377b6d6cb91ef087ef2f8aa1e942254dfae43d8a7610b519aee92",
+        "size_in_bytes": 1004
+      },
+      {
+        "_path": "site-packages/tests/test_exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "2af540fbdcc529268cdda1c99782a0b37608cdc6e398b2c7e04199dfdcee68fa",
+        "sha256_in_prefix": "2af540fbdcc529268cdda1c99782a0b37608cdc6e398b2c7e04199dfdcee68fa",
+        "size_in_bytes": 786
+      },
+      {
+        "_path": "site-packages/tests/test_package.py",
+        "path_type": "hardlink",
+        "sha256": "d711b31671f581eda70dfc2acb24a170290ca95df72edf0196d89048891d1e43",
+        "sha256_in_prefix": "d711b31671f581eda70dfc2acb24a170290ca95df72edf0196d89048891d1e43",
+        "size_in_bytes": 4970
+      },
+      {
+        "_path": "site-packages/tests/test_parse.py",
+        "path_type": "hardlink",
+        "sha256": "47eaa4fa38d9bc942ab691d32b97edc43c08766803702ed0f767d08c0abcf0aa",
+        "sha256_in_prefix": "47eaa4fa38d9bc942ab691d32b97edc43c08766803702ed0f767d08c0abcf0aa",
+        "size_in_bytes": 6829
+      },
+      {
+        "_path": "site-packages/tests/test_release.py",
+        "path_type": "hardlink",
+        "sha256": "999559f392e14b02a06dc44cd01280e37fe5060ef1ac5cae225bb201b40bd2ee",
+        "sha256_in_prefix": "999559f392e14b02a06dc44cd01280e37fe5060ef1ac5cae225bb201b40bd2ee",
+        "size_in_bytes": 4511
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "39d292f2b4a130ddbfc6bc55038e3c2cc30136c068f08b6ec6b5b1eb5303c2b9",
+        "sha256_in_prefix": "39d292f2b4a130ddbfc6bc55038e3c2cc30136c068f08b6ec6b5b1eb5303c2b9",
+        "size_in_bytes": 5699
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "504094ef65b7007645c6640ab31601272e78f07c5fe8607a8c70217222f3e1ec",
+        "sha256_in_prefix": "504094ef65b7007645c6640ab31601272e78f07c5fe8607a8c70217222f3e1ec",
+        "size_in_bytes": 500
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "7cc4959877dbe6b6c63a8eb1bfe3bfb545fa8fe5b28b1b2c13e4a7c1c0d1c4d4",
+        "sha256_in_prefix": "7cc4959877dbe6b6c63a8eb1bfe3bfb545fa8fe5b28b1b2c13e4a7c1c0d1c4d4",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "cd4467efb458b199a693973bb9a130393152069b48a9211987c68cfa2ba9c403",
+        "sha256_in_prefix": "cd4467efb458b199a693973bb9a130393152069b48a9211987c68cfa2ba9c403",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/yarg-0.1.9-py3.6.egg-info/zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/yarg/__about__.py",
+        "path_type": "hardlink",
+        "sha256": "4bd474a02328e134636100b1a96aad381a140059bc655f42e085a6bee8e0d317",
+        "sha256_in_prefix": "4bd474a02328e134636100b1a96aad381a140059bc655f42e085a6bee8e0d317",
+        "size_in_bytes": 188
+      },
+      {
+        "_path": "site-packages/yarg/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5e6cc5e2c5795fa099361e069db05f8f50b2374dfd56afa6692a42b567b0fa8e",
+        "sha256_in_prefix": "5e6cc5e2c5795fa099361e069db05f8f50b2374dfd56afa6692a42b567b0fa8e",
+        "size_in_bytes": 1959
+      },
+      {
+        "_path": "site-packages/yarg/client.py",
+        "path_type": "hardlink",
+        "sha256": "9953025fc09d620d8c7780684c8ca13e29cb22ef12f8ce4f201b5cebabfb5f09",
+        "sha256_in_prefix": "9953025fc09d620d8c7780684c8ca13e29cb22ef12f8ce4f201b5cebabfb5f09",
+        "size_in_bytes": 2122
+      },
+      {
+        "_path": "site-packages/yarg/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "9dd4984084e55f62e95ef0850171b230e42868399b14fdb9d70eee85e17d7aeb",
+        "sha256_in_prefix": "9dd4984084e55f62e95ef0850171b230e42868399b14fdb9d70eee85e17d7aeb",
+        "size_in_bytes": 2050
+      },
+      {
+        "_path": "site-packages/yarg/package.py",
+        "path_type": "hardlink",
+        "sha256": "37289875cee92af7cb65c02b31d951959cbf85df7edff9219f99df9d60762c79",
+        "sha256_in_prefix": "37289875cee92af7cb65c02b31d951959cbf85df7edff9219f99df9d60762c79",
+        "size_in_bytes": 9990
+      },
+      {
+        "_path": "site-packages/yarg/parse.py",
+        "path_type": "hardlink",
+        "sha256": "7cd232a4958c935bbfb7b19f4058b6466c4ddaa7d70263a22881612dd08607e6",
+        "sha256_in_prefix": "7cd232a4958c935bbfb7b19f4058b6466c4ddaa7d70263a22881612dd08607e6",
+        "size_in_bytes": 5406
+      },
+      {
+        "_path": "site-packages/yarg/release.py",
+        "path_type": "hardlink",
+        "sha256": "7854f582d313392069e58c3008528300ae81502545e2a5d41e02cd0f2f2b026a",
+        "sha256_in_prefix": "7854f582d313392069e58c3008528300ae81502545e2a5d41e02cd0f2f2b026a",
+        "size_in_bytes": 4298
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/test_client.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/test_exceptions.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/test_package.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/test_parse.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/tests/__pycache__/test_release.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/__about__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/client.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/exceptions.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/package.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/parse.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/yarg/__pycache__/release.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "yarg==0.1.9",
+  "sha256": "7ec2c95ff7fe43df35c3cf281faf3be9ad00552e81a6c9e002c8f07309ec887e",
+  "size": 12967,
+  "subdir": "noarch",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/yarg-0.1.9-py_1.tar.bz2",
+  "version": "0.1.9"
+}

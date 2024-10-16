@@ -1,0 +1,140 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "docopt",
+    "python >=3.6",
+    "yarg"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/pipreqs-0.4.13-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/PKG-INFO",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/SOURCES.txt",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/dependency_links.txt",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/entry_points.txt",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/not-zip-safe",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/requires.txt",
+    "lib/python3.11/site-packages/pipreqs-0.4.13-py3.11.egg-info/top_level.txt",
+    "lib/python3.11/site-packages/pipreqs/__init__.py",
+    "lib/python3.11/site-packages/pipreqs/mapping",
+    "lib/python3.11/site-packages/pipreqs/pipreqs.py",
+    "lib/python3.11/site-packages/pipreqs/stdlib",
+    "lib/python3.11/site-packages/pipreqs/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/pipreqs/__pycache__/pipreqs.cpython-311.pyc",
+    "bin/pipreqs"
+  ],
+  "fn": "pipreqs-0.4.13-pyhd8ed1ab_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/conda/pkgs/pipreqs-0.4.13-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "ea2c6f2c9f5e84772c41f7e2ab6012ff",
+  "name": "pipreqs",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/pipreqs-0.4.13-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "c255fb0e1c51ace8182114f738764d4aa268188edf03832f05b36edbbae55db7",
+        "sha256_in_prefix": "c255fb0e1c51ace8182114f738764d4aa268188edf03832f05b36edbbae55db7",
+        "size_in_bytes": 7377
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "4c8a91a6839659d27207c46a46743dcc7fe7f283fdf1fb3705b7e39981b4a55b",
+        "sha256_in_prefix": "4c8a91a6839659d27207c46a46743dcc7fe7f283fdf1fb3705b7e39981b4a55b",
+        "size_in_bytes": 831
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "04f5169eb1a570e5d0b63ae3abcf6063b4a6c33090a2902efb9407f43f47479e",
+        "sha256_in_prefix": "04f5169eb1a570e5d0b63ae3abcf6063b4a6c33090a2902efb9407f43f47479e",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "b11444c428f7a5ede35dfd32de468340ed8309a02a78f6a6074c16f487f86804",
+        "sha256_in_prefix": "b11444c428f7a5ede35dfd32de468340ed8309a02a78f6a6074c16f487f86804",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/pipreqs-0.4.13-py3.11.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4ca48af04b4fd2ef2effe3cf3931c48440489a33c3bcea59b6cd661e58c00897",
+        "sha256_in_prefix": "4ca48af04b4fd2ef2effe3cf3931c48440489a33c3bcea59b6cd661e58c00897",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/pipreqs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "be3db2b48c756742bd4ab04cce438606fa8c4a3342f94d1564ea532046979900",
+        "sha256_in_prefix": "be3db2b48c756742bd4ab04cce438606fa8c4a3342f94d1564ea532046979900",
+        "size_in_bytes": 94
+      },
+      {
+        "_path": "site-packages/pipreqs/mapping",
+        "path_type": "hardlink",
+        "sha256": "c4661fe5b0dc76c570f4e2522a2c3eaaf30416a732628f0b72b758ef185f26bc",
+        "sha256_in_prefix": "c4661fe5b0dc76c570f4e2522a2c3eaaf30416a732628f0b72b758ef185f26bc",
+        "size_in_bytes": 26859
+      },
+      {
+        "_path": "site-packages/pipreqs/pipreqs.py",
+        "path_type": "hardlink",
+        "sha256": "efd7e13ea2315233da23a012a7b049913da70a571181e150b2a04ee4c9a82073",
+        "sha256_in_prefix": "efd7e13ea2315233da23a012a7b049913da70a571181e150b2a04ee4c9a82073",
+        "size_in_bytes": 18674
+      },
+      {
+        "_path": "site-packages/pipreqs/stdlib",
+        "path_type": "hardlink",
+        "sha256": "d02adc0f2279cd96cd887ddf6158d661b75c4201172241672212507600653cbe",
+        "sha256_in_prefix": "d02adc0f2279cd96cd887ddf6158d661b75c4201172241672212507600653cbe",
+        "size_in_bytes": 36599
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pipreqs/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pipreqs/__pycache__/pipreqs.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/pipreqs",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pipreqs==0.4.13",
+  "sha256": "6b6abad23455a0809cd307d58a7162505bc3c5d2003635a61708b9eaf2c7383d",
+  "size": 35879,
+  "subdir": "noarch",
+  "timestamp": 1681460639000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pipreqs-0.4.13-pyhd8ed1ab_0.conda",
+  "version": "0.4.13"
+}

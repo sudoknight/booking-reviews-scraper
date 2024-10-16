@@ -1,0 +1,88 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/docopt-0.6.2-py_1",
+  "files": [
+    "lib/python3.11/site-packages/docopt-0.6.2-py2.7.egg-info/PKG-INFO",
+    "lib/python3.11/site-packages/docopt-0.6.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python3.11/site-packages/docopt-0.6.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python3.11/site-packages/docopt-0.6.2-py2.7.egg-info/installed-files.txt",
+    "lib/python3.11/site-packages/docopt-0.6.2-py2.7.egg-info/top_level.txt",
+    "lib/python3.11/site-packages/docopt.py",
+    "lib/python3.11/site-packages/__pycache__/docopt.cpython-311.pyc"
+  ],
+  "fn": "docopt-0.6.2-py_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/docopt-0.6.2-py_1",
+    "type": 1
+  },
+  "md5": "a9ed63e45579cfef026a916af2bc27c9",
+  "name": "docopt",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/docopt-0.6.2-py_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/docopt-0.6.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "fd7d31e84e7f48c0ee013ba13a7369db9c652a0acbb941d24e159cf7894cf6c8",
+        "sha256_in_prefix": "fd7d31e84e7f48c0ee013ba13a7369db9c652a0acbb941d24e159cf7894cf6c8",
+        "size_in_bytes": 21525
+      },
+      {
+        "_path": "site-packages/docopt-0.6.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "c42ee9af9d4df8b6d6a4420d58b6599364fd3c35a45216cca2e84831530d178e",
+        "sha256_in_prefix": "c42ee9af9d4df8b6d6a4420d58b6599364fd3c35a45216cca2e84831530d178e",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "site-packages/docopt-0.6.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/docopt-0.6.2-py2.7.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "0802181055de5b27e9062bb332f25e99b9eb94c7c7c7f723a58a32e2c657fb39",
+        "sha256_in_prefix": "0802181055de5b27e9062bb332f25e99b9eb94c7c7c7f723a58a32e2c657fb39",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "site-packages/docopt-0.6.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c40bcbdb2c1339d2dd7bcc314d5c9ed76f7d8fae5874addc339f7adf0372e525",
+        "sha256_in_prefix": "c40bcbdb2c1339d2dd7bcc314d5c9ed76f7d8fae5874addc339f7adf0372e525",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "site-packages/docopt.py",
+        "path_type": "hardlink",
+        "sha256": "44c650ebd833d852c8731fa3f0c5759506309622300e4c1954a540d78572cc54",
+        "sha256_in_prefix": "44c650ebd833d852c8731fa3f0c5759506309622300e4c1954a540d78572cc54",
+        "size_in_bytes": 19946
+      },
+      {
+        "_path": "lib/python3.11/site-packages/__pycache__/docopt.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "docopt==0.6.2",
+  "sha256": "4bbfb8ab343b4711223aedf797a2678955412124e71415dc2fe9816248f0b28d",
+  "size": 14691,
+  "subdir": "noarch",
+  "timestamp": 1530916777000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/docopt-0.6.2-py_1.tar.bz2",
+  "version": "0.6.2"
+}

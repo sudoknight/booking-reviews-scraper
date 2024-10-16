@@ -1,0 +1,11 @@
+prefix=/workspaces/booking-reviews-scraper/venv
+exec_prefix=/workspaces/booking-reviews-scraper/venv
+libdir=/workspaces/booking-reviews-scraper/venv/lib
+includedir=/workspaces/booking-reviews-scraper/venv/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.32.1
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid

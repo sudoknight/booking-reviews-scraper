@@ -1,0 +1,276 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.4"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/rfc3986-1.5.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/AUTHORS.rst",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/LICENSE",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/rfc3986/__init__.py",
+    "lib/python3.11/site-packages/rfc3986/_mixin.py",
+    "lib/python3.11/site-packages/rfc3986/abnf_regexp.py",
+    "lib/python3.11/site-packages/rfc3986/api.py",
+    "lib/python3.11/site-packages/rfc3986/builder.py",
+    "lib/python3.11/site-packages/rfc3986/compat.py",
+    "lib/python3.11/site-packages/rfc3986/exceptions.py",
+    "lib/python3.11/site-packages/rfc3986/iri.py",
+    "lib/python3.11/site-packages/rfc3986/misc.py",
+    "lib/python3.11/site-packages/rfc3986/normalizers.py",
+    "lib/python3.11/site-packages/rfc3986/parseresult.py",
+    "lib/python3.11/site-packages/rfc3986/uri.py",
+    "lib/python3.11/site-packages/rfc3986/validators.py",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/_mixin.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/abnf_regexp.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/api.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/builder.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/exceptions.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/iri.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/misc.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/normalizers.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/parseresult.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/uri.cpython-311.pyc",
+    "lib/python3.11/site-packages/rfc3986/__pycache__/validators.cpython-311.pyc"
+  ],
+  "fn": "rfc3986-1.5.0-pyhd8ed1ab_0.tar.bz2",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/conda/pkgs/rfc3986-1.5.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "ee18e8644b953e8900282b2ef2a8c5a1",
+  "name": "rfc3986",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/rfc3986-1.5.0-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "42394374c1e235e42fd653ea1de190e0eb6210f0b015a7c92eeeeddb70170c7a",
+        "sha256_in_prefix": "42394374c1e235e42fd653ea1de190e0eb6210f0b015a7c92eeeeddb70170c7a",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c0ddce33bfac480a66bde40c590ede2647a4c8a729dcb0d2ce46c014473d5dd8",
+        "sha256_in_prefix": "c0ddce33bfac480a66bde40c590ede2647a4c8a729dcb0d2ce46c014473d5dd8",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "aa4b8207f89f832a6d84d4baf8cf8838a962f85dd83d1f31cce3973c712ed96a",
+        "sha256_in_prefix": "aa4b8207f89f832a6d84d4baf8cf8838a962f85dd83d1f31cce3973c712ed96a",
+        "size_in_bytes": 6458
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "eaad96da2c5e28505e5a3bc5369128b06e589d8a200798d7a9af173a2bf9bdf2",
+        "sha256_in_prefix": "eaad96da2c5e28505e5a3bc5369128b06e589d8a200798d7a9af173a2bf9bdf2",
+        "size_in_bytes": 2348
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "sha256_in_prefix": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "0b603bf762636c3bec800e1fbe03a917b6f5801379c7c362e869ee395c417e90",
+        "sha256_in_prefix": "0b603bf762636c3bec800e1fbe03a917b6f5801379c7c362e869ee395c417e90",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/rfc3986-1.5.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "675d107ac6f4515f406f1953215f409ce03093edf8dd69c4f392bcc5f3783a60",
+        "sha256_in_prefix": "675d107ac6f4515f406f1953215f409ce03093edf8dd69c4f392bcc5f3783a60",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/rfc3986/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "61cd676162cdc019f55d40adde53cc0ba70f0f74bcd8528f3dce08a536858c21",
+        "sha256_in_prefix": "61cd676162cdc019f55d40adde53cc0ba70f0f74bcd8528f3dce08a536858c21",
+        "size_in_bytes": 1591
+      },
+      {
+        "_path": "site-packages/rfc3986/_mixin.py",
+        "path_type": "hardlink",
+        "sha256": "8859cbc916ddf90310bfd2e563082502dfaf340e02c690619d932ef97c8a3f8c",
+        "sha256_in_prefix": "8859cbc916ddf90310bfd2e563082502dfaf340e02c690619d932ef97c8a3f8c",
+        "size_in_bytes": 13280
+      },
+      {
+        "_path": "site-packages/rfc3986/abnf_regexp.py",
+        "path_type": "hardlink",
+        "sha256": "853231c1041c9e09139a60e7d13d26d3fe9d659222328bd812c21352b6482f74",
+        "sha256_in_prefix": "853231c1041c9e09139a60e7d13d26d3fe9d659222328bd812c21352b6482f74",
+        "size_in_bytes": 9121
+      },
+      {
+        "_path": "site-packages/rfc3986/api.py",
+        "path_type": "hardlink",
+        "sha256": "5338cf9d0e3f1b496e74c55711eaba095626150e79ac3a4abc76a419933155ef",
+        "sha256_in_prefix": "5338cf9d0e3f1b496e74c55711eaba095626150e79ac3a4abc76a419933155ef",
+        "size_in_bytes": 3887
+      },
+      {
+        "_path": "site-packages/rfc3986/builder.py",
+        "path_type": "hardlink",
+        "sha256": "bee23abbb0775106d5ae1e3bc4317b5f9b1db9c4f1ce42d07aebd6eef3dabe89",
+        "sha256_in_prefix": "bee23abbb0775106d5ae1e3bc4317b5f9b1db9c4f1ce42d07aebd6eef3dabe89",
+        "size_in_bytes": 12757
+      },
+      {
+        "_path": "site-packages/rfc3986/compat.py",
+        "path_type": "hardlink",
+        "sha256": "e75c4347b91f56168cec6a932e6c3e9506388efda6c3631b08db819c6e0f9db0",
+        "sha256_in_prefix": "e75c4347b91f56168cec6a932e6c3e9506388efda6c3631b08db819c6e0f9db0",
+        "size_in_bytes": 1644
+      },
+      {
+        "_path": "site-packages/rfc3986/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "7456279be4da6d562959410f5eab46a7cc5f4a0d70598934f536948c27ad5982",
+        "sha256_in_prefix": "7456279be4da6d562959410f5eab46a7cc5f4a0d70598934f536948c27ad5982",
+        "size_in_bytes": 3847
+      },
+      {
+        "_path": "site-packages/rfc3986/iri.py",
+        "path_type": "hardlink",
+        "sha256": "057d67143d09c999d47c01f10c5ab2cf484df09f987cac4885824bc81646019a",
+        "sha256_in_prefix": "057d67143d09c999d47c01f10c5ab2cf484df09f987cac4885824bc81646019a",
+        "size_in_bytes": 5520
+      },
+      {
+        "_path": "site-packages/rfc3986/misc.py",
+        "path_type": "hardlink",
+        "sha256": "6f27bdc61c920ff1ac86e2ff303d154e579d97a8c1c3f12b1bc917b53357cd74",
+        "sha256_in_prefix": "6f27bdc61c920ff1ac86e2ff303d154e579d97a8c1c3f12b1bc917b53357cd74",
+        "size_in_bytes": 4163
+      },
+      {
+        "_path": "site-packages/rfc3986/normalizers.py",
+        "path_type": "hardlink",
+        "sha256": "7faa0bbcd51a771643243b71dc9bea17f7b11860fb3ef2da89b6100547e1d8d1",
+        "sha256_in_prefix": "7faa0bbcd51a771643243b71dc9bea17f7b11860fb3ef2da89b6100547e1d8d1",
+        "size_in_bytes": 5294
+      },
+      {
+        "_path": "site-packages/rfc3986/parseresult.py",
+        "path_type": "hardlink",
+        "sha256": "36f6cfa4fceeba9bad1e925ce09d9c8dc372e81edceabb1c16acd29e4b035a67",
+        "sha256_in_prefix": "36f6cfa4fceeba9bad1e925ce09d9c8dc372e81edceabb1c16acd29e4b035a67",
+        "size_in_bytes": 14742
+      },
+      {
+        "_path": "site-packages/rfc3986/uri.py",
+        "path_type": "hardlink",
+        "sha256": "2d834096bdae8d57c26ba8dc57ca3523584ebaf8aeb97b12447a524f60f2bc0c",
+        "sha256_in_prefix": "2d834096bdae8d57c26ba8dc57ca3523584ebaf8aeb97b12447a524f60f2bc0c",
+        "size_in_bytes": 5225
+      },
+      {
+        "_path": "site-packages/rfc3986/validators.py",
+        "path_type": "hardlink",
+        "sha256": "a9cbcd9eba64d9e97ea2d24df994466743c4e3169210ff7b94a4445c6fd8b693",
+        "sha256_in_prefix": "a9cbcd9eba64d9e97ea2d24df994466743c4e3169210ff7b94a4445c6fd8b693",
+        "size_in_bytes": 13839
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/_mixin.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/abnf_regexp.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/api.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/builder.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/exceptions.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/iri.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/misc.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/normalizers.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/parseresult.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/uri.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/rfc3986/__pycache__/validators.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "rfc3986==1.5.0",
+  "sha256": "ba27ce701f043d1281ca015f2c58850c384435da0effc698e131891c2067a1f0",
+  "size": 34029,
+  "subdir": "noarch",
+  "timestamp": 1620442580000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/rfc3986-1.5.0-pyhd8ed1ab_0.tar.bz2",
+  "version": "1.5.0"
+}

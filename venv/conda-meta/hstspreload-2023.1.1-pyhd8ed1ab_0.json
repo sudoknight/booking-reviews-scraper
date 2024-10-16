@@ -1,0 +1,120 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/hstspreload-2023.1.1-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/LICENSE",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/METADATA",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/RECORD",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/WHEEL",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/hstspreload-2023.1.1.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/hstspreload/__init__.py",
+    "lib/python3.11/site-packages/hstspreload/hstspreload.bin",
+    "lib/python3.11/site-packages/hstspreload/__pycache__/__init__.cpython-311.pyc"
+  ],
+  "fn": "hstspreload-2023.1.1-pyhd8ed1ab_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/conda/pkgs/hstspreload-2023.1.1-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "18cbec9ed00ee13e5bda1ee97d110651",
+  "name": "hstspreload",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/hstspreload-2023.1.1-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "2478d5ee8648328bc65011d64472c061a7d5b24014e76b3bc55b8963e4479add",
+        "sha256_in_prefix": "2478d5ee8648328bc65011d64472c061a7d5b24014e76b3bc55b8963e4479add",
+        "size_in_bytes": 1544
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "3fc25e975178c67563c3a45dc195df4e039c52e0e262e9715ed488258a92db76",
+        "sha256_in_prefix": "3fc25e975178c67563c3a45dc195df4e039c52e0e262e9715ed488258a92db76",
+        "size_in_bytes": 2105
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "8c449466e1bc97e88ac6224c06be40e9c477fb0c7a47315e0c5649719de74c58",
+        "sha256_in_prefix": "8c449466e1bc97e88ac6224c06be40e9c477fb0c7a47315e0c5649719de74c58",
+        "size_in_bytes": 941
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "db07a93359e4e034b8785a58ad6d534ea3dca0635f1e184efe2e66e1c3a299ba",
+        "sha256_in_prefix": "db07a93359e4e034b8785a58ad6d534ea3dca0635f1e184efe2e66e1c3a299ba",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "fa765e5349f0894e0eec2a2f83998d2a153c398ae73d75954f281efccad5b4de",
+        "sha256_in_prefix": "fa765e5349f0894e0eec2a2f83998d2a153c398ae73d75954f281efccad5b4de",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "site-packages/hstspreload-2023.1.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c407ffb5aabdb4cf300d6faad2db6417e5b81513f48bf430f36ffd70c7259b1a",
+        "sha256_in_prefix": "c407ffb5aabdb4cf300d6faad2db6417e5b81513f48bf430f36ffd70c7259b1a",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/hstspreload/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "38af5fa2d53d09ac41d981a2c2366a902496df8d49a16fd48460a9c0c15fe861",
+        "sha256_in_prefix": "38af5fa2d53d09ac41d981a2c2366a902496df8d49a16fd48460a9c0c15fe861",
+        "size_in_bytes": 19076
+      },
+      {
+        "_path": "site-packages/hstspreload/hstspreload.bin",
+        "path_type": "hardlink",
+        "sha256": "4edebb71a179b7dece7a6bfee45d91c50b25f4209116ddc76d1909c6a642cb77",
+        "sha256_in_prefix": "4edebb71a179b7dece7a6bfee45d91c50b25f4209116ddc76d1909c6a642cb77",
+        "size_in_bytes": 3118380
+      },
+      {
+        "_path": "lib/python3.11/site-packages/hstspreload/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "hstspreload==2023.1.1",
+  "sha256": "542de221c36f2657444913c4f4d5b38374d8712a0e52477f35319a81652a9d6c",
+  "size": 1296287,
+  "subdir": "noarch",
+  "timestamp": 1672737199000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/hstspreload-2023.1.1-pyhd8ed1ab_0.conda",
+  "version": "2023.1.1"
+}

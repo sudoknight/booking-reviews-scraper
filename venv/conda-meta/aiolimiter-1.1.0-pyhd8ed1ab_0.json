@@ -1,0 +1,146 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.8.0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/aiolimiter-1.1.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/CHANGELOG.md",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/LICENSE.txt",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/aiolimiter-1.1.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/aiolimiter/__init__.py",
+    "lib/python3.11/site-packages/aiolimiter/compat.py",
+    "lib/python3.11/site-packages/aiolimiter/leakybucket.py",
+    "lib/python3.11/site-packages/aiolimiter/py.typed",
+    "lib/python3.11/site-packages/aiolimiter/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/aiolimiter/__pycache__/compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/aiolimiter/__pycache__/leakybucket.cpython-311.pyc"
+  ],
+  "fn": "aiolimiter-1.1.0-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/aiolimiter-1.1.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "216dbe2316c3f84d9a10229bccbb9fb1",
+  "name": "aiolimiter",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/aiolimiter-1.1.0-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/CHANGELOG.md",
+        "path_type": "hardlink",
+        "sha256": "dd11084faba5eba1de30eb2582e52ba8a6f4a0b07eafd2cab5b4a852ebcd606d",
+        "sha256_in_prefix": "dd11084faba5eba1de30eb2582e52ba8a6f4a0b07eafd2cab5b4a852ebcd606d",
+        "size_in_bytes": 1355
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "738bacef848b9e5890c0558c71fe86510289a00e0de77686fcd4b6f0b1731fee",
+        "sha256_in_prefix": "738bacef848b9e5890c0558c71fe86510289a00e0de77686fcd4b6f0b1731fee",
+        "size_in_bytes": 1072
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "8ab7af7215cad65b48e461f2d65546b716098580ea6fb7e7aa92b36e9a8df40b",
+        "sha256_in_prefix": "8ab7af7215cad65b48e461f2d65546b716098580ea6fb7e7aa92b36e9a8df40b",
+        "size_in_bytes": 4571
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3f2f8d0289231f68f1e10456cf4cd2c4e779d6991c17572f786c1ed30474c8c8",
+        "sha256_in_prefix": "3f2f8d0289231f68f1e10456cf4cd2c4e779d6991c17572f786c1ed30474c8c8",
+        "size_in_bytes": 1134
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "b0ff78e83ee31421de373e48ab87cbe0bbbe3eb5ab16c81f2d76db91c8886708",
+        "sha256_in_prefix": "b0ff78e83ee31421de373e48ab87cbe0bbbe3eb5ab16c81f2d76db91c8886708",
+        "size_in_bytes": 88
+      },
+      {
+        "_path": "site-packages/aiolimiter-1.1.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "65a7e179a74c6d90f03a4037beca552e68e95da33bcc98bd1c922634d7c7b17d",
+        "sha256_in_prefix": "65a7e179a74c6d90f03a4037beca552e68e95da33bcc98bd1c922634d7c7b17d",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/aiolimiter/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e70eeadfc77bdf4f4e3a1d987ec85332609259d4c498d9993c87bfcc63dd1984",
+        "sha256_in_prefix": "e70eeadfc77bdf4f4e3a1d987ec85332609259d4c498d9993c87bfcc63dd1984",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "site-packages/aiolimiter/compat.py",
+        "path_type": "hardlink",
+        "sha256": "44515681f6172f45d8b8b0fe25942ffad4e40331bf575a56357524a9afbfa1be",
+        "sha256_in_prefix": "44515681f6172f45d8b8b0fe25942ffad4e40331bf575a56357524a9afbfa1be",
+        "size_in_bytes": 705
+      },
+      {
+        "_path": "site-packages/aiolimiter/leakybucket.py",
+        "path_type": "hardlink",
+        "sha256": "873cda5dfdaa6cbe20ef1f861c89fa9e9685df51441c4df11478faf466d775c3",
+        "sha256_in_prefix": "873cda5dfdaa6cbe20ef1f861c89fa9e9685df51441c4df11478faf466d775c3",
+        "size_in_bytes": 4348
+      },
+      {
+        "_path": "site-packages/aiolimiter/py.typed",
+        "path_type": "hardlink",
+        "sha256": "db73ddc14eccfad9663897ed6de4270865685aa3849534d3f7e165bc378797f9",
+        "sha256_in_prefix": "db73ddc14eccfad9663897ed6de4270865685aa3849534d3f7e165bc378797f9",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/python3.11/site-packages/aiolimiter/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/aiolimiter/__pycache__/compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/aiolimiter/__pycache__/leakybucket.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "aiolimiter==1.1.0",
+  "sha256": "2eb803265efb402fc8173d7a73f03ff54139a85f77931d121d016b37960e832a",
+  "size": 12701,
+  "subdir": "noarch",
+  "timestamp": 1715277520000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/aiolimiter-1.1.0-pyhd8ed1ab_0.conda",
+  "version": "1.1.0"
+}

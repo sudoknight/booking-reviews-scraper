@@ -1,0 +1,166 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "decorator >=3.4.2",
+    "py >=1.4.26,<2.0.0",
+    "python"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/retry-0.9.2-py_0",
+  "files": [
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/AUTHORS",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/LICENSE",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/METADATA",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/RECORD",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/WHEEL",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/pbr.json",
+    "lib/python3.11/site-packages/retry-0.9.2.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/retry/__init__.py",
+    "lib/python3.11/site-packages/retry/api.py",
+    "lib/python3.11/site-packages/retry/compat.py",
+    "lib/python3.11/site-packages/retry/tests/__init__.py",
+    "lib/python3.11/site-packages/retry/tests/test_retry.py",
+    "lib/python3.11/site-packages/retry/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/retry/__pycache__/api.cpython-311.pyc",
+    "lib/python3.11/site-packages/retry/__pycache__/compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/retry/tests/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/retry/tests/__pycache__/test_retry.cpython-311.pyc"
+  ],
+  "fn": "retry-0.9.2-py_0.tar.bz2",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/conda/pkgs/retry-0.9.2-py_0",
+    "type": 1
+  },
+  "md5": "b83b7289405e8aab02d1a72bc14506f8",
+  "name": "retry",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/retry-0.9.2-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "b51e278a5ffa0d5741c640349135466792a9e58602dddf41664be48737c56768",
+        "sha256_in_prefix": "b51e278a5ffa0d5741c640349135466792a9e58602dddf41664be48737c56768",
+        "size_in_bytes": 273
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "56a03398afe087933f43390608a782480db1b11626ac8d795e697a838ebd12c0",
+        "sha256_in_prefix": "56a03398afe087933f43390608a782480db1b11626ac8d795e697a838ebd12c0",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4ed1729c573a10812d81cecc4b791f5258c00b3854191843722b43fff6e39a49",
+        "sha256_in_prefix": "4ed1729c573a10812d81cecc4b791f5258c00b3854191843722b43fff6e39a49",
+        "size_in_bytes": 5769
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "43283c83dd3e63831494d46d8bfe45ad8b9baf96ec760351dd6eb321c845575a",
+        "sha256_in_prefix": "43283c83dd3e63831494d46d8bfe45ad8b9baf96ec760351dd6eb321c845575a",
+        "size_in_bytes": 1132
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "87f6959f9381d8811152331b8b6a6e72647fcf3589b64df4dd85ef861eb4349f",
+        "sha256_in_prefix": "87f6959f9381d8811152331b8b6a6e72647fcf3589b64df4dd85ef861eb4349f",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/pbr.json",
+        "path_type": "hardlink",
+        "sha256": "e3948cd9309299c3a0772a8494518f5cf1a716c19eb89e7dacf364b91d1846d0",
+        "sha256_in_prefix": "e3948cd9309299c3a0772a8494518f5cf1a716c19eb89e7dacf364b91d1846d0",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "site-packages/retry-0.9.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6ce680c6f22beba3ba0135ac7cd5799c5b532286bff192bdc1587b66bb4c1114",
+        "sha256_in_prefix": "6ce680c6f22beba3ba0135ac7cd5799c5b532286bff192bdc1587b66bb4c1114",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/retry/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d3db7ec7368d119c593a1b117c76aaeb162c01c59cf60bc0d8c0c7bd1fb6f441",
+        "sha256_in_prefix": "d3db7ec7368d119c593a1b117c76aaeb162c01c59cf60bc0d8c0c7bd1fb6f441",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "site-packages/retry/api.py",
+        "path_type": "hardlink",
+        "sha256": "3401dda12cd0092ec32ebe26876ba33424929b076ac3606213304cd6ee1ca979",
+        "sha256_in_prefix": "3401dda12cd0092ec32ebe26876ba33424929b076ac3606213304cd6ee1ca979",
+        "size_in_bytes": 4391
+      },
+      {
+        "_path": "site-packages/retry/compat.py",
+        "path_type": "hardlink",
+        "sha256": "924aefe23bdcf2e2d1ce2a6a283c7eae01a91050c62701348fe179e6c75ede3b",
+        "sha256_in_prefix": "924aefe23bdcf2e2d1ce2a6a283c7eae01a91050c62701348fe179e6c75ede3b",
+        "size_in_bytes": 477
+      },
+      {
+        "_path": "site-packages/retry/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/retry/tests/test_retry.py",
+        "path_type": "hardlink",
+        "sha256": "c6c78cee1000a8bd303b9b689c76bdc687468dcedc16c85807fb7e7f44017cfd",
+        "sha256_in_prefix": "c6c78cee1000a8bd303b9b689c76bdc687468dcedc16c85807fb7e7f44017cfd",
+        "size_in_bytes": 3728
+      },
+      {
+        "_path": "lib/python3.11/site-packages/retry/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/retry/__pycache__/api.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/retry/__pycache__/compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/retry/tests/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/retry/tests/__pycache__/test_retry.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "retry==0.9.2",
+  "sha256": "9066f5507fb8d143a01fe1462bf416680edbd3e1dd0efc9ce4124cd8b74acb15",
+  "size": 8786,
+  "subdir": "noarch",
+  "timestamp": 1564930934000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/retry-0.9.2-py_0.tar.bz2",
+  "version": "0.9.2"
+}

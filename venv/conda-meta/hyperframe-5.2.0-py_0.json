@@ -1,0 +1,119 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/hyperframe-5.2.0-py_0",
+  "files": [
+    "lib/python3.11/site-packages/hyperframe-5.2.0-py2.7.egg-info/PKG-INFO",
+    "lib/python3.11/site-packages/hyperframe-5.2.0-py2.7.egg-info/SOURCES.txt",
+    "lib/python3.11/site-packages/hyperframe-5.2.0-py2.7.egg-info/dependency_links.txt",
+    "lib/python3.11/site-packages/hyperframe-5.2.0-py2.7.egg-info/top_level.txt",
+    "lib/python3.11/site-packages/hyperframe/__init__.py",
+    "lib/python3.11/site-packages/hyperframe/exceptions.py",
+    "lib/python3.11/site-packages/hyperframe/flags.py",
+    "lib/python3.11/site-packages/hyperframe/frame.py",
+    "lib/python3.11/site-packages/hyperframe/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/hyperframe/__pycache__/exceptions.cpython-311.pyc",
+    "lib/python3.11/site-packages/hyperframe/__pycache__/flags.cpython-311.pyc",
+    "lib/python3.11/site-packages/hyperframe/__pycache__/frame.cpython-311.pyc"
+  ],
+  "fn": "hyperframe-5.2.0-py_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/hyperframe-5.2.0-py_0",
+    "type": 1
+  },
+  "md5": "9f1f5b0d27dfd2c6d05b0568b028921c",
+  "name": "hyperframe",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/hyperframe-5.2.0-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/hyperframe-5.2.0-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "b83109a474a6538602eb2ba5eb958ee08fd724bd310792099b4ea66cc6c8c827",
+        "sha256_in_prefix": "b83109a474a6538602eb2ba5eb958ee08fd724bd310792099b4ea66cc6c8c827",
+        "size_in_bytes": 9003
+      },
+      {
+        "_path": "site-packages/hyperframe-5.2.0-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "79b57f9edaf3bfe030cdf7c6ed3675d7b5dfc3c72db87e55b0d87c58c8078f49",
+        "sha256_in_prefix": "79b57f9edaf3bfe030cdf7c6ed3675d7b5dfc3c72db87e55b0d87c58c8078f49",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "site-packages/hyperframe-5.2.0-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/hyperframe-5.2.0-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6885d6371cca17f8f013c972586e4f6aa9f944fecf0c161e82eada89afa81c91",
+        "sha256_in_prefix": "6885d6371cca17f8f013c972586e4f6aa9f944fecf0c161e82eada89afa81c91",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/hyperframe/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f6a97a1dbdb94373eb378afb25d997f143333777057032d07b8fea61ff225897",
+        "sha256_in_prefix": "f6a97a1dbdb94373eb378afb25d997f143333777057032d07b8fea61ff225897",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "site-packages/hyperframe/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "7052cc3752235d23f28695863ad7e13eb54ce6abbb929ace4091d269648e77cf",
+        "sha256_in_prefix": "7052cc3752235d23f28695863ad7e13eb54ce6abbb929ace4091d269648e77cf",
+        "size_in_bytes": 936
+      },
+      {
+        "_path": "site-packages/hyperframe/flags.py",
+        "path_type": "hardlink",
+        "sha256": "3bf32f72fcdc73e1d1fd7f9d3cc6ff67b18cb6da306fd1bd943ca29bc47823bb",
+        "sha256_in_prefix": "3bf32f72fcdc73e1d1fd7f9d3cc6ff67b18cb6da306fd1bd943ca29bc47823bb",
+        "size_in_bytes": 1286
+      },
+      {
+        "_path": "site-packages/hyperframe/frame.py",
+        "path_type": "hardlink",
+        "sha256": "51c9708193175275fd201c0a256bd425c1b526b0e729b06d7179f1e2fe2eaa4c",
+        "sha256_in_prefix": "51c9708193175275fd201c0a256bd425c1b526b0e729b06d7179f1e2fe2eaa4c",
+        "size_in_bytes": 26658
+      },
+      {
+        "_path": "lib/python3.11/site-packages/hyperframe/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/hyperframe/__pycache__/exceptions.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/hyperframe/__pycache__/flags.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/hyperframe/__pycache__/frame.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "hyperframe==5.2.0",
+  "sha256": "0ad799e26ca809f372621598ef73ef7541c5455ad0a2c7a1513914452f3f62a0",
+  "size": 13117,
+  "subdir": "noarch",
+  "timestamp": 1547894558000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/hyperframe-5.2.0-py_0.tar.bz2",
+  "version": "5.2.0"
+}

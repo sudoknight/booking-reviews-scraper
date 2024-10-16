@@ -1,0 +1,64 @@
+{
+  "build": "h712a8e2_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "binutils_impl_linux-64 2.43"
+  ],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/ld_impl_linux-64-2.43-h712a8e2_1",
+  "files": [
+    "bin/x86_64-conda-linux-gnu-ld",
+    "bin/x86_64-conda_cos6-linux-gnu-ld",
+    "x86_64-conda-linux-gnu/bin/ld",
+    "x86_64-conda_cos6-linux-gnu/bin/ld"
+  ],
+  "fn": "ld_impl_linux-64-2.43-h712a8e2_1.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/opt/conda/pkgs/ld_impl_linux-64-2.43-h712a8e2_1",
+    "type": 1
+  },
+  "md5": "83e1364586ceb8d0739fbc85b5c95837",
+  "name": "ld_impl_linux-64",
+  "package_tarball_full_path": "/opt/conda/pkgs/ld_impl_linux-64-2.43-h712a8e2_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/x86_64-conda-linux-gnu-ld",
+        "path_type": "hardlink",
+        "sha256": "83a2aba652fcc2750c8faa45ab5bc0f5a23cebf5f750ff04d636b8d851ed70a3",
+        "sha256_in_prefix": "83a2aba652fcc2750c8faa45ab5bc0f5a23cebf5f750ff04d636b8d851ed70a3",
+        "size_in_bytes": 3318336
+      },
+      {
+        "_path": "bin/x86_64-conda_cos6-linux-gnu-ld",
+        "path_type": "softlink",
+        "sha256": "83a2aba652fcc2750c8faa45ab5bc0f5a23cebf5f750ff04d636b8d851ed70a3",
+        "size_in_bytes": 3318336
+      },
+      {
+        "_path": "x86_64-conda-linux-gnu/bin/ld",
+        "path_type": "softlink",
+        "sha256": "83a2aba652fcc2750c8faa45ab5bc0f5a23cebf5f750ff04d636b8d851ed70a3",
+        "size_in_bytes": 3318336
+      },
+      {
+        "_path": "x86_64-conda_cos6-linux-gnu/bin/ld",
+        "path_type": "softlink",
+        "sha256": "83a2aba652fcc2750c8faa45ab5bc0f5a23cebf5f750ff04d636b8d851ed70a3",
+        "size_in_bytes": 3318336
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0c21387f9a411e3d1f7f2969026bacfece133c8f1e72faea9cde29c0c19e1f3a",
+  "size": 669616,
+  "subdir": "linux-64",
+  "timestamp": 1727304687000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.43-h712a8e2_1.conda",
+  "version": "2.43"
+}
